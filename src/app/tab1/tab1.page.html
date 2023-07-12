@@ -1,17 +1,244 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header mode="md">
+  <ion-toolbar color="primary">
     <ion-title>
-      Tab 1
+      <h1 class="ion-text-center">Comidas</h1>
     </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleSearchBar()">
+        <ion-icon
+          *ngIf="showSearchBar"
+          name="close"
+          slot="icon-only"
+        ></ion-icon>
+        <ion-icon
+          *ngIf="!showSearchBar"
+          name="search"
+          slot="icon-only"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="start">
+      <ion-button mode="ios">
+        <ion-icon slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary" class="ion-padding-horizontal">
+    <ion-segment mode="ios" value="all">
+      <ion-segment-button value="all">
+        <ion-label>All</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        <ion-label>Favorites</ion-label>
+      </ion-segment-button>
+    </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-searchbar
+    *ngIf="showSearchBar"
+    class="ion-margin-top"
+    animated="true"
+    placeholder="Pesquisa"
+  ></ion-searchbar>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lanches</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>X-Tudo Super</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>X-Egg</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>X-Burguer</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>X-Salada</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Comidas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Parmegiana de Frango</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Picanha</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Filé de Frango</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Costela de Porco</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Bebidas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Sprite</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Coca-Cola</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Suco</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Água</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Sobremesas</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Petit Gateau</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Sorvete</ion-label>
+        </ion-item>
+
+        <ion-item>
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Banana Split</ion-label>
+        </ion-item>
+
+        <ion-item lines="none">
+          <ion-thumbnail slot="start">
+            <img
+              alt="Silhouette of mountains"
+              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+            />
+          </ion-thumbnail>
+          <ion-label>Brigadeiro</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
