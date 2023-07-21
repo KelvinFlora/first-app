@@ -1,4 +1,4 @@
-<ion-header mode="md">
+<ion-header mode="ios">
   <ion-toolbar color="primary">
     <ion-title>
       <h1 class="ion-text-center">Comidas</h1>
@@ -31,8 +31,14 @@
       <ion-segment-button value="all">
         <ion-label>All</ion-label>
       </ion-segment-button>
-      <ion-segment-button value="favorites">
-        <ion-label>Favorites</ion-label>
+      <ion-segment-button value="comidas">
+        <ion-label>Comidas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="bebidas">
+        <ion-label>Bebidas</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="sobremesas">
+        <ion-label>Sobremesas</ion-label>
       </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
@@ -54,10 +60,7 @@
       <ion-list>
         <ion-item>
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img alt="Silhouette of mountains" src="assets/images/x-tudo.jpg" />
           </ion-thumbnail>
           <ion-label>X-Tudo Super</ion-label>
         </ion-item>
@@ -66,17 +69,17 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/x-bacon.jpg"
             />
           </ion-thumbnail>
-          <ion-label>X-Egg</ion-label>
+          <ion-label>X-Bacon</ion-label>
         </ion-item>
 
         <ion-item>
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/x-burguer.jpg"
             />
           </ion-thumbnail>
           <ion-label>X-Burguer</ion-label>
@@ -86,7 +89,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/x-salada.jpg"
             />
           </ion-thumbnail>
           <ion-label>X-Salada</ion-label>
@@ -105,7 +108,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/parmegiana.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Parmegiana de Frango</ion-label>
@@ -115,7 +118,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/picanha.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Picanha</ion-label>
@@ -125,7 +128,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/frango.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Filé de Frango</ion-label>
@@ -135,7 +138,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/costela.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Costela de Porco</ion-label>
@@ -154,7 +157,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/sprite.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Sprite</ion-label>
@@ -162,30 +165,21 @@
 
         <ion-item>
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img alt="Silhouette of mountains" src="assets/images/coca.jpeg" />
           </ion-thumbnail>
           <ion-label>Coca-Cola</ion-label>
         </ion-item>
 
         <ion-item>
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img alt="Silhouette of mountains" src="assets/images/suco.jpeg" />
           </ion-thumbnail>
           <ion-label>Suco</ion-label>
         </ion-item>
 
         <ion-item lines="none">
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img alt="Silhouette of mountains" src="assets/images/agua.jpeg" />
           </ion-thumbnail>
           <ion-label>Água</ion-label>
         </ion-item>
@@ -201,10 +195,7 @@
       <ion-list>
         <ion-item>
           <ion-thumbnail slot="start">
-            <img
-              alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
-            />
+            <img alt="Silhouette of mountains" src="assets/images/petit.jpeg" />
           </ion-thumbnail>
           <ion-label>Petit Gateau</ion-label>
         </ion-item>
@@ -213,7 +204,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/sorvete.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Sorvete</ion-label>
@@ -223,7 +214,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/banana.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Banana Split</ion-label>
@@ -233,7 +224,7 @@
           <ion-thumbnail slot="start">
             <img
               alt="Silhouette of mountains"
-              src="https://ionicframework.com/docs/img/demos/thumbnail.svg"
+              src="assets/images/brigadeiro.jpeg"
             />
           </ion-thumbnail>
           <ion-label>Brigadeiro</ion-label>
