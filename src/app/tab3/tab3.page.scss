@@ -1,0 +1,41 @@
+ion-avatar{
+    width: 50px; /* Ajuste o valor conforme desejado */
+    height: 50px; /* Ajuste o valor conforme desejado */
+}
+
+.message-bubble {
+    background-color: #f8c6c6; /* Cor de fundo da mensagem enviada */
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border: 0px;
+    padding: 10px;
+    max-width: 70%; /* Ajuste o tamanho máximo do balão */
+    margin-left: auto; /* Alinhar o balão à direita */
+    color: black;
+  }
+
+  
+  .message-bubble.sent {
+    background-color: #f8c6c6; /* Cor de fundo da mensagem enviada */
+    margin-left: auto; /* Alinhar o balão à direita */
+    margin-right: 0; /* Remover margem direita */
+    color: black;
+    border: 0px;
+    border-bottom-right-radius: 0;
+  }
+  
+
+ion-input {
+    margin-left: 10px;
+  }
+  
+  ion-button {
+    --border-radius: 25px; /* Ajuste o valor para tornar o botão mais ou menos redondo */
+    --padding-start: 10px;
+    --padding-end: 10px;
+    height: 40px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
