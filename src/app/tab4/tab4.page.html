@@ -1,0 +1,21 @@
+<ion-header mode="ios">
+  <ion-toolbar color="primary">
+    <ion-title>
+      <h1 class="ion-margin">Menu</h1>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list lines="inset">
+    <ion-item>
+      <ion-toggle
+        class="ion-margin-horizontal"
+        (ionChange)="toggleTheme($event)"
+      >
+        <ion-icon name="moon-outline" class="ion-margin-end"></ion-icon>
+        Dark Mode
+      </ion-toggle>
+    </ion-item>
+  </ion-list>
+</ion-content>
