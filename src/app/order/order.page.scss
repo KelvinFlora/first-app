@@ -1,12 +1,19 @@
+ion-header,
+.header {
+  background: url("/assets/images/bgorder.jpeg") no-repeat top center / cover,
+    var(--ion-background-color, #fff);
+}
+
 ion-toolbar {
-    height: 150px;
-    display: flex;
-    padding-top: 0;
-    padding-bottom: 0;
-    padding: 0;
+  height: 150px;
+  display: flex;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding: 0;
+  --background: rgba(0, 0, 0, 0.65);
 }
 
 ion-button {
-    margin-right: 0;
-    margin-left: auto;
+  height: 40px;
+  width: 200px;
 }
