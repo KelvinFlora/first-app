@@ -11,4 +11,25 @@
       <ion-title size="large">Carrinho</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Meus Pedidos</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let order of myOrders">
+          <ion-thumbnail slot="start">
+            <img *ngIf="order.img" [src]="order.img" />
+          </ion-thumbnail>
+          <ion-label> {{ order.title }}</ion-label>
+          <ion-label slot="end">R$ 25,00 </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-col>
+    <ion-item class="ion-align-items-center">
+      <ion-label>Valor Total: R$ 58,00</ion-label>
+    </ion-item>
+  </ion-col>
 </ion-content>

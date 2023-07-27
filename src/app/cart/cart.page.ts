@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-cart',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cart.page.scss'],
 })
 export class CartPage implements OnInit {
+  myOrders: any[] = [];
 
-  constructor() { }
+  constructor(private orderService: OrderService) {}
 
-  ngOnInit() {
+  ionViewDidEnter() {
+    this.myOrders = this.orderService.getOrders();
   }
 
+  ngOnInit() {}
 }
