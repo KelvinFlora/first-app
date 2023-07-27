@@ -1,5 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Storage } from '@ionic/storage-angular';
+import { OrderService } from '../order.service';
 
 @Component({
   selector: 'app-order',
@@ -7,7 +9,13 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./order.page.scss'],
 })
 export class OrderPage implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private route: ActivatedRoute,
+    private storage: Storage,
+    private orderService: OrderService
+  ) {}
+
+  // All Foods //
   id: Number;
 
   item = {
@@ -166,6 +174,32 @@ export class OrderPage implements OnInit {
 
   shouldCheckboxBeChecked(category: string): boolean {
     return category !== 'Sobremesas' && category !== 'Bebidas';
+  }
+
+  // SelectedFoods //
+
+  myOrders: any[] = [];
+
+  ionViewDidEnter() {
+    this.storage.create();
+
+    this.storage.get('myOrders').then((data) => {
+      if (data) {
+        this.myOrders = data;
+      }
+    });
+  }
+
+  adicionarPedidoAoArray(item: any) {
+    if (!this.myOrders.some((order) => order.id === item.id)) {
+      this.myOrders.push(item);
+
+      this.storage.set('myOrders', this.myOrders);
+    }
+  }
+
+  addOrders(item: any) {
+    this.orderService.addOrder(item);
   }
 
   ngOnInit(): void {
