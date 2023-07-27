@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -162,6 +162,10 @@ export class OrderPage implements OnInit {
     if (this.amount < 20) {
       this.amount += 1;
     }
+  }
+
+  shouldCheckboxBeChecked(category: string): boolean {
+    return category !== 'Sobremesas' && category !== 'Bebidas';
   }
 
   ngOnInit(): void {

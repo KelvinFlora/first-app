@@ -18,31 +18,15 @@
       <img *ngIf="item.img" [src]="item.img" />
       <ion-card-header>
         <ion-card-title> {{item.title}} </ion-card-title>
-        <ion-card-subtitle>Lanches</ion-card-subtitle>
+        <ion-card-subtitle>{{ item.category }}</ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
         <ion-list lines="none">
-          <ion-item>
-            <ion-checkbox checked="true">Hambúrguer </ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Salada</ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Tomate</ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Maionese</ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Bacon</ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Queijo</ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-checkbox checked="true">Calabresa</ion-checkbox>
+          <ion-item *ngFor="let ingredients of item.specs">
+            <ion-checkbox [checked]="shouldCheckboxBeChecked(item.category)">
+              {{ ingredients }}
+            </ion-checkbox>
           </ion-item>
         </ion-list>
       </ion-card-content>
@@ -53,7 +37,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="2">
-          <ion-item class="ion-text-center">
+          <ion-item class="ion-text-center" lines="none">
             <ion-icon
               (click)="minusAmount()"
               name="remove-circle-outline"
@@ -61,7 +45,7 @@
           </ion-item>
         </ion-col>
         <ion-col>
-          <ion-item class="ion-text-center">
+          <ion-item class="ion-text-center" lines="none">
             <ion-label>{{ amount }} </ion-label>
           </ion-item>
         </ion-col>

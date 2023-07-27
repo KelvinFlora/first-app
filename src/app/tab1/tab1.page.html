@@ -53,15 +53,14 @@
     <ion-card-content>
       <ion-list>
         <ion-item
-          [routerLink]="'/order/' + item.id"
-          *ngFor="let item of items; index as i"
-          [lines]="i === items.length - 1 ? 'none' : 'normal'"
+          [routerLink]="'/order/' + snack.id"
+          *ngFor="let snack of foods.Lanches; index as i"
           detail="false"
         >
           <ion-thumbnail slot="start">
-            <img *ngIf="item.img" [src]="item.img" />
+            <img *ngIf="snack.img" [src]="snack.img" />
           </ion-thumbnail>
-          <ion-label>{{ item.title }}</ion-label>
+          <ion-label>{{ snack.title }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -73,44 +72,15 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item
+          [routerLink]="'/order/' + comida.id"
+          *ngFor="let comida of foods.Comidas; index as i"
+          detail="false"
+        >
           <ion-thumbnail slot="start">
-            <img
-              alt="Prato com parmegiana, arroz e batatas fritas"
-              src="assets/images/parmegiana.jpeg"
-            />
+            <img *ngIf="comida.img" [src]="comida.img" />
           </ion-thumbnail>
-          <ion-label>Parmegiana de Frango</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Prato com picanha, salada e arroz"
-              src="assets/images/picanha.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Picanha</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Prato com purê de batata, arroz, feijão e filé de frango"
-              src="assets/images/frango.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Filé de Frango</ion-label>
-        </ion-item>
-
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
-            <img
-              alt="Prato com arroz, costela de porco e molho barbecue"
-              src="assets/images/costela.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Costela de Porco</ion-label>
+          <ion-label> {{ comida.title }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -122,41 +92,15 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item
+          [routerLink]="'/order/' + bebida.id"
+          *ngFor="let bebida of foods.Bebidas"
+          detail="false"
+        >
           <ion-thumbnail slot="start">
-            <img
-              alt="Garrafa de refrigerante de limão sprite"
-              src="assets/images/sprite.jpeg"
-            />
+            <img *ngIf="bebida.img" [src]="bebida.img" />
           </ion-thumbnail>
-          <ion-label>Sprite</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Garrafa de refrigerante de cola, coca-cola."
-              src="assets/images/coca.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Coca-Cola</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Copo de suco de laranja com uma laranja no copo"
-              src="assets/images/suco.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Suco</ion-label>
-        </ion-item>
-
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
-            <img alt="Garrafa de água" src="assets/images/agua.jpeg" />
-          </ion-thumbnail>
-          <ion-label>Água</ion-label>
+          <ion-label>{{ bebida.title }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -168,44 +112,15 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item
+          [routerLink]="'/order/' + sobremesa.id"
+          *ngFor="let sobremesa of foods.Sobremesas"
+          detail="false"
+        >
           <ion-thumbnail slot="start">
-            <img
-              alt="Bolinho petit gateau com uma bola de sorvete de chocolate em cima"
-              src="assets/images/petit.jpeg"
-            />
+            <img *ngIf="sobremesa.img" [src]="sobremesa.img" />
           </ion-thumbnail>
-          <ion-label>Petit Gateau</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Taça com bola de sorvete de chocolate"
-              src="assets/images/sorvete.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Sorvete</ion-label>
-        </ion-item>
-
-        <ion-item>
-          <ion-thumbnail slot="start">
-            <img
-              alt="Prato com bananas e bolas de sorvete por cima"
-              src="assets/images/banana.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Banana Split</ion-label>
-        </ion-item>
-
-        <ion-item lines="none">
-          <ion-thumbnail slot="start">
-            <img
-              alt="Brigadeiros com coberturas de cores diversas, chocolate, morango, maracujá e danone"
-              src="assets/images/brigadeiro.jpeg"
-            />
-          </ion-thumbnail>
-          <ion-label>Brigadeiro</ion-label>
+          <ion-label> {{ sobremesa.title }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
